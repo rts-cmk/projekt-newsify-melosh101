@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: convex-service
+  namespace: projekt-newsify
+spec:
+  selector:
+    app: convex-deployment
+  ports:
+  - port: 3210
+    targetPort: 3210
+  - port: 3211
+    targetPort: 3211
+  - port: 6791
+    targetPort: 6791
