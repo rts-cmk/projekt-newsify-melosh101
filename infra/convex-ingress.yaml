@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: gitea-ingress
-  namespace: devops-tools
+  name: convex-ingress
+  namespace: projekt-newsify
   annotations:
     spec.ingressClassName: traefik
     cert-manager.io/cluster-issuer: letsencrypt-prod
@@ -18,11 +18,7 @@ spec:
               service:
                 name: convex-service
                 port: 
-                  number: 6791
-
-    - host: convex.project-newsify.milasholsting.dk
-      http:
-        paths:
+                  number: 3210
           - path: /api
             pathType: Prefix
             
