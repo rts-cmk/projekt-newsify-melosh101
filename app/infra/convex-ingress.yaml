@@ -1,0 +1,54 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: gitea-ingress
+  namespace: devops-tools
+  annotations:
+    spec.ingressClassName: traefik
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    traefik.ingress.kubernetes.io/router.middlewares: default-redirect-https@kubernetescrd
+spec:
+  rules:
+    - host: convex.project-newsify.milasholsting.dk
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: convex-service
+                port: 
+                  number: 6791
+
+    - host: convex.project-newsify.milasholsting.dk
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            
+            backend:
+              service:
+                name: convex-service
+                port: 
+                  number: 6791
+
+    - host: convex-api.project-newsify.milasholsting.dk
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            
+            backend:
+              service:
+                name: convex-service
+                port: 
+                  number: 3211
+
+    
+  tls:
+    - secretName: convex-tls
+      hosts:
+        - convex.milasholsting.dk
+    - secretName: convex-api-tls
+      hosts:
+        - convex-api.milasholsting.dk
