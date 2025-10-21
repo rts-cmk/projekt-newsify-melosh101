@@ -13,7 +13,7 @@ const defaultSettings: UserSettings = {
 
 export const SettingsContext = createContext({
     settings: defaultSettings,
-    saveSettings: (values: UserSettings) => {},
+    saveSettings: (_values: UserSettings) => {},
 })
 
 export const SettingsProvider = ({children}: {children: React.ReactNode}) => {
