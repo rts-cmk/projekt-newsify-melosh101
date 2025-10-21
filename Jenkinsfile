@@ -25,6 +25,8 @@ spec:
       image: gcr.io/kaniko-project/executor:latest
       imagePullPolicy: IfNotPresent
       command:
+        - /busybox/sh
+        - -c
         - cat
       tty: true
       volumeMounts:
@@ -32,9 +34,11 @@ spec:
           mountPath: /home/jenkins/agent
       workingDir: /home/jenkins/agent
     - name: kubectl
-      image: bitnami/kubectl:1.29.3
+      image: bitnami/kubectl:1.29
       imagePullPolicy: IfNotPresent
       command:
+        - /bin/sh
+        - -c
         - cat
       tty: true
       volumeMounts:
