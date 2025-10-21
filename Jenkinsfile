@@ -26,8 +26,9 @@ spec:
       imagePullPolicy: IfNotPresent
       command:
         - /busybox/sh
+      args:
         - -c
-        - cat
+        - while true; do sleep 3600; done
       tty: true
       volumeMounts:
         - name: workspace-volume
@@ -38,8 +39,9 @@ spec:
       imagePullPolicy: IfNotPresent
       command:
         - /bin/sh
+      args:
         - -c
-        - cat
+        - while true; do sleep 3600; done
       tty: true
       volumeMounts:
         - name: workspace-volume
@@ -198,7 +200,13 @@ kubectl apply -f "${INFRA_DIR}/"
       echo "Successfully built ${env.IMAGE_REFERENCE} and applied manifests from ${env.INFRA_DIR}."
     }
     always {
-      cleanWs()
+      script {
+        try {
+          cleanWs()
+        } catch (err) {
+          echo "Workspace cleanup skipped: ${err.message}"
+        }
+      }
     }
   }
 }
