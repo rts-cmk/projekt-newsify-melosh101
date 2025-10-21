@@ -99,12 +99,4 @@ spec:
             }
         }
     }
-
-    post {
-        always {
-            container('dind') {
-                sh 'docker system prune -f'
-            }
-        }
-    }
 }
