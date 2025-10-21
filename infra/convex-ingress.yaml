@@ -12,19 +12,18 @@ spec:
     - host: convex.project-newsify.milasholsting.dk
       http:
         paths:
-          - path: /
+          - path: /api
             pathType: Prefix
             backend:
               service:
                 name: convex-service
                 port: 
                   number: 3210
-          - path: /api
+          - path: /
             pathType: Prefix
-            
             backend:
               service:
-                name: convex-service
+                name: convex-dashboard-service
                 port: 
                   number: 6791
 

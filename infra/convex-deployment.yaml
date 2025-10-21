@@ -18,13 +18,13 @@ spec:
           image: ghcr.io/get-convex/convex-backend:latest
           imagePullPolicy: Always
           ports:
-            - 3210
-            - 3211
+            - containerPort: 3210
+            - containerPort: 3211
           env:
             - name: CONVEX_CLOUD_ORIGIN
-              value: convex.project-newsify.milasholsting.dk
+              value: https://convex.project-newsify.milasholsting.dk
             - name: CONVEX_SITE_ORIGIN
-              value: convex-api.project-newsify.milasholsting.dk
+              value: https://convex-api.project-newsify.milasholsting.dk
           resources:
             requests:
               memory: 512Mi
@@ -44,17 +44,34 @@ spec:
               port: 3210
             initialDelaySeconds: 10
             periodSeconds: 5
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: convex-dashboard-deployment
+  namespace: projekt-newsify
+spec:
+  selector:
+    matchLabels:
+      app: convex-dashboard-deployment
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: convex-dashboard-deployment
+    spec:
+      containers:
         - name: convex-dashboard
           image: ghcr.io/get-convex/convex-dashboard:latest
           imagePullPolicy: Always
           env:
             - name: NEXT_PUBLIC_DEPLOYMENT_URL
-              value: convex.project-newsify.milasholsting.dk
+              value: https://convex.project-newsify.milasholsting.dk
           resources:
             requests:
               memory: "128Mi"
               cpu: "500m"
-            limits:
+            limits: 
               memory: "256Mi"
               cpu: "500m"
           ports:
