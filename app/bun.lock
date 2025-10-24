@@ -4,9 +4,10 @@
     "": {
       "name": "app",
       "dependencies": {
+        "gsap": "^3.13.0",
         "motion": "^12.23.24",
-        "react": "^19.2.0",
-        "react-dom": "^19.2.0",
+        "react": "canary",
+        "react-dom": "canary",
         "react-router": "^7.9.4",
       },
       "devDependencies": {
@@ -341,6 +342,8 @@
 
     "graphemer": ["graphemer@1.4.0", "", {}, "sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag=="],
 
+    "gsap": ["gsap@3.13.0", "", {}, "sha512-QL7MJ2WMjm1PHWsoFrAQH/J8wUeqZvMtHO58qdekHpCfhvhSL4gSiz6vJf5EeMP0LOn3ZCprL2ki/gjED8ghVw=="],
+
     "has-flag": ["has-flag@4.0.0", "", {}, "sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ=="],
 
     "ignore": ["ignore@5.3.2", "", {}, "sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g=="],
@@ -453,9 +456,9 @@
 
     "queue-microtask": ["queue-microtask@1.2.3", "", {}, "sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A=="],
 
-    "react": ["react@19.2.0", "", {}, "sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ=="],
+    "react": ["react@19.3.0-canary-71b3a03c-20251021", "", {}, "sha512-WBHkpvUcIPk4pAv7FeeWjRNI14byoiq+onjNo7lGG2aBG6tUJ5DHJnZxQ0JPGasph7l7D+B7oAe4wMdod0gKDA=="],
 
-    "react-dom": ["react-dom@19.2.0", "", { "dependencies": { "scheduler": "^0.27.0" }, "peerDependencies": { "react": "^19.2.0" } }, "sha512-UlbRu4cAiGaIewkPyiRGJk0imDN2T3JjieT6spoL2UeSf5od4n5LB/mQ4ejmxhCFT1tYe8IvaFulzynWovsEFQ=="],
+    "react-dom": ["react-dom@19.3.0-canary-71b3a03c-20251021", "", { "dependencies": { "scheduler": "0.28.0-canary-71b3a03c-20251021" }, "peerDependencies": { "react": "19.3.0-canary-71b3a03c-20251021" } }, "sha512-gdAU7a2VwdAX9dyQ8KH9EKJADhkMFhDlz7itIrP1pUtZCbJwxlQgUkc1+BY0ra2I1LenCUK7+Re2TGZ6reV59Q=="],
 
     "react-refresh": ["react-refresh@0.17.0", "", {}, "sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ=="],
 
@@ -513,7 +516,7 @@
 
     "sass-embedded-win32-x64": ["sass-embedded-win32-x64@1.93.2", "", { "os": "win32", "cpu": "x64" }, "sha512-BbSucRP6PVRZGIwlEBkp+6VQl2GWdkWFMN+9EuOTPrLxCJZoq+yhzmbjspd3PeM8+7WJ7AdFu/uRYdO8tor1iQ=="],
 
-    "scheduler": ["scheduler@0.27.0", "", {}, "sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q=="],
+    "scheduler": ["scheduler@0.28.0-canary-71b3a03c-20251021", "", {}, "sha512-567VDOombRygn1WowO/Of/H/Au0mHkMeDAiJOkaIGQEzOim3awl7uFAmgU0OAd7oOb+KxM4hNAtdgXs9JSRZog=="],
 
     "semver": ["semver@6.3.1", "", { "bin": { "semver": "bin/semver.js" } }, "sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA=="],
 
