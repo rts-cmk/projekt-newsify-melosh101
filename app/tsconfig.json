@@ -23,7 +23,8 @@
 
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "$/*": ["./src/components/"]
     },
 
     // Some stricter flags (disabled by default)
